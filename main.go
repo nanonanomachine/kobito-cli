@@ -20,7 +20,6 @@ func fatal(message interface{}) {
 }
 
 func main() {
-	processStdin()
 	rootCmd := &cobra.Command{Use: "kobito"}
 	cmdLs(rootCmd)
 	cmdShow(rootCmd)
@@ -31,5 +30,6 @@ func main() {
 	cmdPdf(rootCmd)
 	cmdPassword(rootCmd)
 	cmdSticker(rootCmd)
+	cmdWrite(rootCmd)
 	rootCmd.Execute()
 }
